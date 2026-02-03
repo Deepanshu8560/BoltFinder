@@ -1,64 +1,119 @@
-# EV Charger Locator
+# ⚡ VoltFinder
 
-A high-performance web application for locating Electric Vehicle (EV) charging stations, built with Next.js, Leaflet, and GraphQL.
+<div align="center">
+
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-Yoga-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+**The Ultimate Real-Time EV Charging Station Locator**
+
+[Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [Deployment](#-deployment)
+
+</div>
+
+---
+
+## 📖 Overview
+
+**VoltFinder** is a cutting-edge web application designed to help electric vehicle owners find the perfect charging station in seconds. Built with performance and user experience in mind, it combines specific filtering capabilities with an interactive, responsive map interface.
+
+Whether you're looking for a Supercharger, a specific connector type, or just the nearest available spot, VoltFinder powers your journey.
 
 ## 🚀 Features
 
-- **Interactive Map**: Real-time visualization of charging stations using Leaflet.js with marker clustering for performance.
-- **Advanced Filtering**: Filter stations by brand, speed (Slow, Fast, Supercharger), connector type, and status.
-- **Station Details**: Comprehensive information panels for each station, including availability and supported payment methods.
-- **Mock GraphQL API**: A robust backend simulation using `graphql-yoga` for realistic data fetching.
-- **Responsive Design**: Optimized for both desktop and mobile viewing.
+### 🗺️ Interactive Mapping
+- **High-Performance Map**: Powered by **Leaflet.js** for smooth panning and zooming.
+- **Smart Clustering**: Efficiently handles thousands of markers using `react-leaflet-cluster`.
+- **Live Status Indicators**: Instantly see if a station is Available, Busy, or Offline.
+
+### 🔍 Advanced Filtering
+- **Brand Selection**: Filter by Tesla, ChargePoint, EVgo, and more.
+- **Charging Speed**: Find exactly what you need—Slow (AC), Fast (DC), or Superchargers.
+- **Connector Types**: Filter for J1772, CCS, CHAdeMO, or Tesla plugs.
+- **Real-time Availability**: Show only stations that are currently open.
+
+### ⚡ Modern Tech & Architecture
+- **GraphQL API**: robust simulation using `graphql-yoga` for flexible data querying.
+- **Responsive Design**: Flawless experience on desktop, tablet, and mobile.
+- **Beautiful UI**: Crafted with **shadcn/ui** and **Tailwind CSS** for a premium feel.
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router, TypeScript)
-- **Mapping**: [Leaflet.js](https://leafletjs.com/) with `react-leaflet`
-- **Data Fetching**: [SWR](https://swr.vercel.app/) & [GraphQL Request](https://github.com/jasonkuhrt/graphql-request)
-- **API**: [GraphQL Yoga](https://the-guild.dev/graphql/yoga-server)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) & [shadcn/ui](https://ui.shadcn.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
+| Category | Technologies |
+|----------|--------------|
+| **Framework** | [Next.js 15](https://nextjs.org/) (App Router) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/) |
+| **Maps** | [Leaflet](https://leafletjs.com/), [React Leaflet](https://react-leaflet.js.org/) |
+| **Data Fetching** | [GraphQL Yoga](https://the-guild.dev/graphql/yoga-server), [SWR](https://swr.vercel.app/) |
+| **Icons** | [Lucide React](https://lucide.dev/) |
+| **Validation** | [Zod](https://zod.dev/), [React Hook Form](https://react-hook-form.com/) |
 
 ## 📦 Getting Started
 
-### Prerequisites
+Follow these steps to get your local environment up and running.
 
-- [Bun](https://bun.sh/) (recommended) or Node.js
+### Prerequisites
+- **Node.js** (v18+) or **Bun** (recommended)
+- **Git**
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/ev-charger-locator.git
-   cd ev-charger-locator
-   ```
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/Deepanshu8560/BoltFinder.git
+    cd BoltFinder
+    ```
 
-2. Install dependencies:
-   ```bash
-   bun install
-   ```
+2.  **Install dependencies**
+    ```bash
+    bun install
+    # or
+    npm install
+    ```
 
-3. Run the development server:
-   ```bash
-   bun dev
-   ```
+3.  **Run the development server**
+    ```bash
+    bun dev
+    # or
+    npm run dev
+    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4.  **Explore**
+    Open [http://localhost:3000](http://localhost:3000) in your browser to see the app in action.
 
 ## 📁 Project Structure
 
-- `src/app/api/graphql`: GraphQL API implementation.
-- `src/components/Map`: Interactive map component logic.
-- `src/hooks/use-filters.tsx`: Global state management for filtering.
-- `src/lib/mock-data.ts`: Mock station data source.
-- `src/graphql/schema.ts`: GraphQL type definitions and resolvers.
-
-## 📜 License
-
-MIT
+```bash
+├── src
+│   ├── app            # Next.js App Router pages & API routes
+│   ├── components     # Reusable UI components (Map, Sidebar, etc.)
+│   ├── graphql        # Schema definitions and resolvers
+│   ├── hooks          # Custom React hooks (useFilters, etc.)
+│   └── lib            # Utilities and mock data
+├── public             # Static assets
+└── ...config files
+```
 
 ## 🚀 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy is using **Vercel**, the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1.  Push your code to a Git repository (GitHub, GitLab, BitBucket).
+2.  Import your project into Vercel.
+3.  Vercel will automatically detect Next.js and deploy your site!
+
+Check out the [Next.js Deployment Documentation](https://nextjs.org/docs/deployment) for more details.
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by Deepanshu</sub>
+</div>
