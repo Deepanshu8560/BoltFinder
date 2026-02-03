@@ -1,4 +1,4 @@
-# ⚡ VoltFinder
+# ⚡ BoltFinder
 
 <div align="center">
 
@@ -18,9 +18,9 @@
 
 ## 📖 Overview
 
-**VoltFinder** is a cutting-edge web application designed to help electric vehicle owners find the perfect charging station in seconds. Built with performance and user experience in mind, it combines specific filtering capabilities with an interactive, responsive map interface.
+**BoltFinder** is a cutting-edge web application designed to help electric vehicle owners find the perfect charging station in seconds. Built with performance and user experience in mind, it combines specific filtering capabilities with an interactive, responsive map interface.
 
-Whether you're looking for a Supercharger, a specific connector type, or just the nearest available spot, VoltFinder powers your journey.
+Whether you're looking for a Supercharger, a specific connector type, or just the nearest available spot, BoltFinder powers your journey.
 
 ## 🚀 Features
 
